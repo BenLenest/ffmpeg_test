@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future shell() async {
     var shell = Shell();
     await shell.run('''
-      ./../Update.exe --update https://github.com/BenLenest/ffmpeg_test/tree/master/RELEASES
+      ./../Update.exe --update C:/Users/PC/Desktop/TESTSQUIRREL/LastVersion
   ''');
     shell = shell.popd();
   }
@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'V1.0.0 - You have pushed the button this many times:',
             ),
             Text(
               '$_counter',
