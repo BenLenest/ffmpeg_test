@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future shell() async {
     var shell = Shell();
     await shell.run('''
-      ./../Update.exe --update https://github.com/BenLenest/ffmpeg_test
+      ./../Update.exe --update https://github.com/BenLenest/ffmpeg_test/tree/master/RELEASES
   ''');
     shell = shell.popd();
   }
