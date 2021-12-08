@@ -1,11 +1,8 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:process_run/shell.dart';
-import 'package:squirrel/squirrel.dart';
 
 
 void main() {
@@ -67,6 +64,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+
+    shell();
   }
 
   Future<File> getImageFromGallery() async {
@@ -84,14 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future shell() async {
     var shell = Shell();
     await shell.run('''
-      echo test use ffmpeg binary
-  ''');
-
-    shell = shell.pushd('external-bin');
-    await shell.run('''
-      # Listing directory in the example folder
-      # ffmpeg -i input.mp4 -vf scale=-2:1080 -q:v 8 output.mp4 
-      ffmpeg -i input.mp4 -codec copy -pix_fmt yuv420p -c:v libx264 -vf scale=1080:614 -crf 29 output.mp4
+      ./../Update.exe --update https://github.com/BenLenest/ffmpeg_test
   ''');
     shell = shell.popd();
   }

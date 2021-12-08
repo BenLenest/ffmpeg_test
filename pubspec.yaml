@@ -96,4 +96,4 @@ squirrel:
   windows:
     appFriendlyName: "SquirrelUpdateApp"
     appIcon: ".\\assets\\img.ico"
-    releaseUrl: "https://github.com/BenLenest/ffmpeg_test/tree/master/build/windows/runner/Release"
+    releaseUrl: "https://github.com/BenLenest/ffmpeg_test"
